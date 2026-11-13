@@ -1,0 +1,62 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261114024542
+Username: LAPTOP-OSANT6FD\Asus
+RunAs User: LAPTOP-OSANT6FD\Asus
+Configuration Name: 
+Machine: LAPTOP-OSANT6FD (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 14960
+PSVersion: 5.1.26100.9711
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9711
+BuildVersion: 10.0.26100.9711
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\evidence\database-findings.txt
+
+=== OASIS BUILDERS: IMPORTS ===
+           filename           |  status   | row_count | invoice_count |       created_at       |      completed_at
+------------------------------+-----------+-----------+---------------+------------------------+------------------------
+ oasis-builders-oct-2026.xlsx | Completed |        16 |             8 | 2026-10-31 07:40:00+00 | 2026-10-31 07:40:03+00
+(1 row)
+
+=== OASIS BUILDERS: NOVEMBER INVOICES ===
+ invoice_number | status | import_id | rejected_by
+----------------+--------+-----------+-------------
+(0 rows)
+
+=== AL NOOR: IMPORTS ===
+          filename          |  status   | row_count | invoice_count |       created_at
+----------------------------+-----------+-----------+---------------+------------------------
+ al-noor-fuel-oct-2026.xlsx | Completed |         8 |             4 | 2026-11-02 05:05:00+00
+(1 row)
+
+=== SAHARA: IMPORTS AND INVOICE STATUS ===
+            filename            | import_status | invoice_count | invoice_number |  status  |            asp_message_id
+--------------------------------+---------------+---------------+----------------+----------+--------------------------------------
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-001   | Accepted | 7c15816d-da38-4120-b7ad-43b833dc93ae
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-002   | Accepted | 5f48e3a9-4234-4f73-9757-01d564eabae3
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-003   | Accepted | c97a8036-61db-497c-bcd6-e43650615ef1
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-004   | Accepted | db913326-dbd0-4b2e-a6e9-8f28c220f2a7
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-005   | Accepted | 3fc32b67-bd1c-462f-90b0-5a4963459b60
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-006   | Accepted | 0fc3bb34-1064-4b38-8760-5f776f80824c
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-007   | Accepted | 844ecc3e-9919-4878-848a-12c2a6df3041
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-008   | Accepted | 64fea740-828d-4774-981f-4ff0194667ed
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-009   | Accepted | a21cec66-0385-4637-a1e0-7fe4a4394d60
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-010   | Accepted | 0978a833-cb6c-4214-b627-4e5d5ff9dc70
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-011   | Accepted | 0b6d9cbb-4447-497e-8e80-46bee6608613
+ sahara-medical-batch-1029.xlsx | Completed     |            12 | SMS-1029-012   | Accepted | d446ad4e-6a0d-4ef8-9747-47261c159a18
+(12 rows)
+
+=== SAHARA: NOVEMBER INVOICE SEARCH ===
+ invoice_number | status | import_id | asp_message_id
+----------------+--------+-----------+----------------
+(0 rows)
+**********************
+Windows PowerShell transcript end
+End time: 20261114024544
+**********************

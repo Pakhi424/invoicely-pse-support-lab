@@ -1,0 +1,250 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261114024634
+Username: LAPTOP-OSANT6FD\Asus
+RunAs User: LAPTOP-OSANT6FD\Asus
+Configuration Name: 
+Machine: LAPTOP-OSANT6FD (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 14960
+PSVersion: 5.1.26100.9711
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9711
+BuildVersion: 10.0.26100.9711
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\evidence\operational-findings.txt
+
+=== DOCKER SERVICES ===
+NAME                          IMAGE                             COMMAND                  SERVICE      CREATED       STATUS
+       PORTS
+invoicely-lite-alloy-1        grafana/alloy:v1.21.3             "/bin/alloy run --se…"   alloy        5 hours ago   Up 2 hours
+
+invoicely-lite-api-1          invoicely-lite-api                "/usr/local/bin/api"     api          2 hours ago   Up 2 hours (heal
+thy)   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+invoicely-lite-asp-mock-1     invoicely-lite-asp-mock           "/usr/local/bin/asp-…"   asp-mock     2 hours ago   Up 2 hours (heal
+thy)   0.0.0.0:8090->8090/tcp, [::]:8090->8090/tcp
+invoicely-lite-cadvisor-1     ghcr.io/google/cadvisor:v0.60.6   "/usr/bin/entrypoint…"   cadvisor     5 hours ago   Up 2 hours (heal
+thy)   8080/tcp
+invoicely-lite-grafana-1      grafana/grafana:13.2.6            "/run.sh"                grafana      5 hours ago   Up 2 hours
+       0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+invoicely-lite-loki-1         grafana/loki:3.7.9                "/usr/bin/loki -conf…"   loki         5 hours ago   Up 2 hours
+       3100/tcp
+invoicely-lite-postgres-1     postgres:16.15-alpine3.23         "docker-entrypoint.s…"   postgres     5 hours ago   Up 2 hours (heal
+thy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+invoicely-lite-prometheus-1   prom/prometheus:v3.16.0           "/bin/prometheus --c…"   prometheus   5 hours ago   Up 2 hours
+       0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp
+invoicely-lite-web-1          invoicely-lite-web                "docker-entrypoint.s…"   web          2 hours ago   Up 2 hours (heal
+thy)   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+
+=== API RESTART COUNT ===
+Status=running RestartCount=0 StartedAt=2026-11-13T19:24:55.592898393Z
+
+=== RECENT API LOGS ===
+api-1  | {"time":"2026-11-13T20:59:55.938355845Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:00:06.031084892Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:00:16.142545106Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:00:26.245658086Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:00:36.330783519Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:00:46.416536073Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:00:56.493156253Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:01:06.581713383Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:01:16.700097427Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:01:26.792719013Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:01:36.88011787Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/v
+1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:01:46.978562388Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:01:57.072878889Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:02:07.157746712Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:02:17.260163113Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:02:27.346787145Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:02:37.438835429Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:02:47.533202733Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:02:57.624014081Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:03:07.712714938Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:03:17.836311563Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:03:27.918182272Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:03:37.992280175Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:03:48.075974299Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:03:58.161967221Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:04:08.260314509Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:04:18.355808977Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:04:28.455432211Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:04:38.535622467Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:04:48.61208165Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/v
+1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:04:58.69510825Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/v
+1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:05:08.807845279Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:05:18.887859087Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:05:28.964625434Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:05:39.078911452Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:05:49.172284926Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:05:59.253847099Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:06:09.345138751Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:06:19.420639228Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:06:29.501013537Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:06:39.581973823Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:06:49.658121493Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:06:59.743933579Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:07:09.827846188Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:07:19.911982834Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:07:29.995658437Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:07:40.099108462Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:07:50.18138734Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/v
+1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:08:00.270992424Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:08:10.360786256Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:08:20.439357756Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:08:30.526157098Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:08:40.631057621Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:08:50.718969722Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:09:00.795073069Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:09:10.872995009Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:09:20.950615757Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:09:31.02619129Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/v
+1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:09:41.109709049Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:09:51.186431301Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:10:01.289743086Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:10:11.386350007Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:10:21.459672283Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:10:31.553638754Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:10:41.644907961Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:10:51.731696043Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:11:01.813564735Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:11:11.90101328Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/v
+1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:11:21.989718243Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:11:32.084640207Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:11:42.181815488Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:11:52.276405704Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:12:02.358905034Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:12:12.444366929Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:12:22.528132356Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:12:32.60814081Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/v
+1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:12:42.693965345Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:12:52.773487993Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:13:02.89249261Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/v
+1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:13:12.974336603Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:13:23.053797224Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:13:33.132978505Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:13:43.214354943Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:13:53.300679776Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:14:03.386617769Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:14:13.46856029Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/v
+1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:14:23.560070098Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:14:33.643669759Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:14:43.723617134Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:14:53.864530442Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:15:03.959088738Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:15:14.046980508Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:15:24.152559283Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:15:34.237855018Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:15:44.322336682Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:15:54.398463422Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:16:04.546013456Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":1}
+api-1  | {"time":"2026-11-13T21:16:14.638438873Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:16:24.718966981Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+api-1  | {"time":"2026-11-13T21:16:34.799053093Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/sellers","route":"/
+v1/sellers","status":200,"duration_ms":0}
+**********************
+Windows PowerShell transcript end
+End time: 20261114024636
+**********************
