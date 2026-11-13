@@ -2,7 +2,7 @@
 
 - **Name:** Pakhi Mishra
 - **Date submitted:** 11/14/2026
-- **Repository link:** 
+- **Repository link:** https://github.com/Pakhi424/invoicely-pse-support-lab
 - **Total time spent (real time):** 2 hours
 
 > All customer replies below are exercise drafts, not messages actually sent. Exercise clock: Monday, 16 November 2026, Asia/Dubai.
